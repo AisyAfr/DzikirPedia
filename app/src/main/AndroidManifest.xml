@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dzikirpedia">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/dzikirpedialogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/dzikirpedialogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dzikirpedia"
+        tools:targetApi="31">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.detail.DzikirSholatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.AfternoonDzikirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.MorningDzikirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DzikirForEverytimeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DailyDzikirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
+    </application>
+
+</manifest>
