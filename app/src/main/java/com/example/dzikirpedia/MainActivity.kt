@@ -8,25 +8,30 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.PopupMenu
+import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toolbar
 import com.example.dzikirpedia.databinding.ActivityMainBinding
 import com.example.dzikirpedia.ui.DailyDzikirActivity
 import com.example.dzikirpedia.ui.DzikirForEverytimeActivity
 import com.example.dzikirpedia.ui.detail.AfternoonDzikirActivity
 import com.example.dzikirpedia.ui.detail.DzikirSholatActivity
 import com.example.dzikirpedia.ui.detail.MorningDzikirActivity
+import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),  View.OnClickListener{
 
     private lateinit var binding: ActivityMainBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setView()
+
+
     }
 
     private fun setView() {
@@ -37,7 +42,6 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener{
             cvDzikirDoaHarian.setOnClickListener(this@MainActivity)
         }
     }
-
 
     override fun onClick(v: View?) {
         when(v?.id){
